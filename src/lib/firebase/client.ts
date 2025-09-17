@@ -1,4 +1,3 @@
-
 'use client';
 
 import { initializeApp, getApps, getApp, FirebaseError } from 'firebase/app';
@@ -7,12 +6,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
-  "projectId": "ideaspark-s803j",
-  "appId": "1:764324658377:web:acb00f5c994067d91e6118",
-  "storageBucket": "ideaspark-s803j.firebasestorage.app",
-  "apiKey": "AIzaSyCL_dDkyjCiz1rW3Qho2njq1qbVbnckIXw",
-  "authDomain": "ideaspark-s803j.firebaseapp.com",
-  "messagingSenderId": "764324658377",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
